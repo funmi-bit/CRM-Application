@@ -55,7 +55,7 @@
                 <input type="text" class="form-control" id="country" name="country" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary mt-3">Register</button>
         </form>
     </div>
     

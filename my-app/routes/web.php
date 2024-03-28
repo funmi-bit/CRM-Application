@@ -29,7 +29,14 @@ Route::middleware('auth')->group(function () {
     // Routes for CustomerController
     Route::get('/customers/create', [CustomerController::class, 'create'])->name('customers.create');
     Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');
-    Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index'); // Change route to use GET method
+    Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index'); 
+    Route::put('/customers/{id}', [CustomerController::class, 'update'])->name('customers.update');
+    Route::get('/customers/{id}/edit', [CustomerController::class, 'edit'])->name('customers.edit');
+    Route::put('/customer-update{id}', [CustomerController::class, 'update'])->name('customers.update');
+    Route::delete('/customers/{id}', [CustomerController::class, 'destroy'])->name('customers.destroy');
+
+
+
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
