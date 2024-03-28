@@ -41,10 +41,9 @@
                     </x-slot>
 
                     <x-slot name="content">
-                    <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Register product') }}</a>
-                        <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('View products') }}</a>
-                        <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Update productr') }}</a>
-                        <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Delete product') }}</a>                    </x-slot>
+                    <a href="{{ route('products.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Register product') }}</a>
+                        <a href="{{ route('products.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('View products') }}</a>
+                    </x-slot>
                 </x-dropdown>
             </div>
             
