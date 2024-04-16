@@ -62,10 +62,9 @@
                     </x-slot>
 
                     <x-slot name="content">
-                    <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Register contact log') }}</a>
-                        <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('View contact logs') }}</a>
-                        <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Update contact log') }}</a>
-                        <a href="{{ route('customers.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Delete cContact log') }}</a>                    </x-slot>
+                    <a href="{{ route('contact_logs.create') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('Register contact log') }}</a>
+                        <a href="{{ route('contact_logs.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{{ __('View contact logs') }}</a>
+                   </x-slot>
                 </x-dropdown>
             </div>
         </div>

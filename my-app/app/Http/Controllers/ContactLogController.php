@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactLog;
+use App\Models\Product;
+
 use Illuminate\Http\Request;
+
 
 class ContactLogController extends Controller
 {
@@ -14,7 +17,8 @@ class ContactLogController extends Controller
      */
     public function create()
     {
-        return view('contact_logs.create');
+        $products = Product::all(); // Assuming you have a Product model
+        return view('contact_logs.create', compact('products'));
     }
 
     /**

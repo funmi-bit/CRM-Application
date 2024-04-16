@@ -5,6 +5,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController; 
 use App\Http\Controllers\ProductController; 
+use App\Http\Controllers\ContactLogController; 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -19,6 +20,9 @@ use Inertia\Inertia;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -53,6 +57,20 @@ Route::middleware('auth')->group(function () {
     Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
+    // Routes for contact log
+    Route::get('/contact_logs/create', [ContactLogController::class, 'create'])->name('contact_logs.create');
+    Route::post('/contact_logs', [ContactLogController::class, 'store'])->name('contact_logs.store');
+    
+    // Display a list of contact logs
+    Route::get('/contact_logs', [ContactLogController::class, 'index'])->name('contact_logs.index');
+    
+    // Update an existing contact log
+    Route::get('/contact_logs/{id}/edit', [ContactLogController::class, 'edit'])->name('contact_logs.edit');
+    Route::put('/contact_logs/{id}', [ContactLogController::class, 'update'])->name('contact_logs.update');
+    
+    // Delete a contact log
+    Route::delete('/contact_logs/{id}', [ContactLogController::class, 'destroy'])->name('contact_logs.destroy');
+    
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
