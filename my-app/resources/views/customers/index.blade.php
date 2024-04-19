@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Customer List</h1>
-        <table id="customerTable" class="table">
+        <table id="customerTable" class="table table-sm">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -32,13 +32,15 @@
                         <td>{{ $customer->state }}</td>
                         <td>{{ $customer->country }}</td>
                         
-                        <td><a href="{{ route('customers.edit', ['id' => $customer->id]) }}">Edit</a></td>
+                        <td><a href="{{ route('customers.edit', ['id' => $customer->id]) }}">
+                        <button class="btn btn-primary">Edit</button>
+                        </a></td>
                         
                         <td>
                         <form action="{{ route('customers.destroy', ['id' => $customer->id]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-primary" }" onclick="return confirm('Are you sure you want to delete this Customer?')">Delete</button>
+                                <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this Customer?')">Delete</button>
                             </form>
                         </td>
                     </tr>

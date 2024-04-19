@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Update customer</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+@extends('layouts.app')
 
-</head>
-<body>
+@section('content')
     <div class="container mt-3">
     <a href="{{ route('dashboard') }}" class="btn btn-secondary mb-3">Back to Dashboard</a>
 
@@ -57,8 +49,6 @@
                 <input type="text" class="form-control" id="country-{{ $customer->id }}" name="country" value="{{ $customer->country }}">
             </div>
 
-            <button type="submit" class="btn btn-primary mt-3">Update Customer</button>
+            <button class="btn btn-success mt-3">Update Customer</button>
         </form>
     </div>
-</body>
-</html>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Create New Product</h1>
+        <h1 class="h1 mb-3">Create New Product</h1>
         <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
             @csrf
 
@@ -25,7 +25,7 @@
                 <input type="file" class="form-control" id="image" name="image">
             </div>
             
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary">Submit</button>
         </form>
     </div>
 @endsection
