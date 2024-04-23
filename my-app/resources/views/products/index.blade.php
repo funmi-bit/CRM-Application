@@ -7,7 +7,6 @@
             <thead>
                 <tr>
                     <th>Product Name</th>
-                    <th>Image</th>
                     <th>Description</th>
                     <th>Price</th>
                     <th>Edit</th>
@@ -18,13 +17,6 @@
                 @foreach ($products as $product)
                     <tr>
                         <td>{{ $product->product_name }}</td>
-                        <td>
-                            @if ($product->image)
-                                <img src="{{ asset('public/images/' . $product->image) }}" alt="{{ $product->product_name }}" style="max-width: 100px;">
-                            @else
-                                No Image
-                            @endif
-                        </td>
                         <td>{{ $product->description }}</td>
                         <td>{{ $product->price }}</td>
                         <td><a class="btn btn-primary" href="{{ route('products.edit', ['id' => $product->id]) }}">Edit</a></td>
