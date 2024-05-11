@@ -22,11 +22,10 @@ class ProductController extends Controller
         ]);
 
 
-if ($request->hasFile('image')) {
-
-} else {
+if (!$request->hasFile('image')) {
     $validatedData['image'] = 'default_image.jpg'; // Provide a default image name
-}
+
+} 
 
 
         $product = Product::create($validatedData);
@@ -57,7 +56,11 @@ if ($request->hasFile('image')) {
             'description' => 'required',
             'price' => 'required|numeric',
         ]);
+        
+if ($request->hasFile('image')) {
+    $validatedData['image'] = $request->input('image'); // Provide a default image name
 
+}
         $product = Product::find($id);
         $product->update($validatedData);
 

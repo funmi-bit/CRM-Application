@@ -8,16 +8,15 @@
         <form action="{{ route('customers.update', ['id' => $customer->id]) }}" method="POST">
             @csrf
             @method('PUT')
-
             <div class="mb-3">
             <div class="mb-3">
-    <label for="first_name">First name:</label>
-    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ $customer->first_name }}" required>
-</div>
-<div class="mb-3">
-    <label for="last_name">Last name:</label>
-    <input type="text" class="form-control" id="last_name" name="last_name" value="{{ $customer->last_name }}" required>
-</div>
+            <label for="first_name">First name:</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ $customer->first_name }}" required>
+        </div>
+        <div class="mb-3">
+            <label for="last_name">Last name:</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ $customer->last_name }}" required>
+        </div>
 
             </div>
             <div class="mb-3">

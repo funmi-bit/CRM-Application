@@ -3,6 +3,9 @@
 @section('content')
     <div class="container">
         <h1>Customer List</h1>
+        <div class="mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+        </div>
         <table id="customerTable" class="table table-sm">
             <thead>
                 <tr>
@@ -32,12 +35,14 @@
                         <td>{{ $customer->state }}</td>
                         <td>{{ $customer->country }}</td>
                         
-                        <td><a href="{{ route('customers.edit', ['id' => $customer->id]) }}">
-                        <button class="btn btn-primary">Edit</button>
-                        </a></td>
+                        <td>
+                            <a href="{{ route('customers.edit', ['id' => $customer->id]) }}">
+                                <button class="btn btn-primary">Edit</button>
+                            </a>
+                        </td>
                         
                         <td>
-                        <form action="{{ route('customers.destroy', ['id' => $customer->id]) }}" method="POST">
+                            <form action="{{ route('customers.destroy', ['id' => $customer->id]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this Customer?')">Delete</button>
@@ -57,7 +62,11 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.6/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function() {
-            $('#customerTable').DataTable();
+            var table = $('#customerTable').DataTable();
+            
+            $('#searchInput').on('keyup', function() {
+                table.search(this.value).draw();
+            });
         });
     </script>
 @endsection

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('last_name');
             $table->bigInteger('phone');
             $table->string('email');
-            $table->string('address'); 
+            $table->string('address')->nullable(); 
             $table->string('city');
             $table->string('postcode');
             $table->string('state');

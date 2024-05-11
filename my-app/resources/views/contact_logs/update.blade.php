@@ -24,11 +24,12 @@
             </div>
             <div class="form-group">
                 <label for="product_id">Product:</label>
-                <select class="form-control" id="product_id" name="product_id" required>
-                    @foreach($products as $product)
-                        <option value="{{ $product->id }}" @if($product->id == $contactLog->product_id) selected @endif>{{ $product->product_name }}</option>
-                    @endforeach
-                </select>
+                <label for="product_id">Product:</label>
+            <select class="form-control" id="product_id" name="product_id" required>
+                @foreach($products as $product)
+                    <option value="{{ $product->id }}">{{  $product->product_name  }}</option>
+                @endforeach
+            </select>
             </div>
             <div class="form-group">
                 <label for="subject">Subject:</label>

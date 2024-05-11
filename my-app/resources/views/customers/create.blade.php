@@ -10,43 +10,43 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="mb-3">
-                    <label for="first_name" class="form-label">First Name</label>
+                    <label for="first_name" class="form-label">First Name <span class="required">*</span></label>
                     <input type="text" class="form-control-inline" id="first_name" name="first_name" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="last_name" class="form-label">Last Name</label>
+                    <label for="last_name" class="form-label">Last Name <span class="required">*</span></label>
                     <input type="text" class="form-control-inline" id="last_name" name="last_name" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
+                    <label for="phone" class="form-label">Phone Number <span class="required">*</span></label>
                     <input type="tel" class="form-control-inline" id="phone" name="phone" required>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="mb-3">
-                    <label for="address" class="form-label">Address</label>
+                    <label for="address" class="form-label">Address <span class="required">*</span></label>
                     <input type="text" class="form-control-inline" id="address" name="address" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="city" class="form-label">City</label>
+                    <label for="city" class="form-label">City <span class="required">*</span></label>
                     <input type="text" class="form-control-inline" id="city" name="city" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="postcode" class="form-label">Postcode</label>
+                    <label for="postcode" class="form-label">Postcode <span class="required">*</span></label>
                     <input type="text" class="form-control-inline" id="postcode" name="postcode" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="state" class="form-label">State</label>
+                    <label for="state" class="form-label">State <span class="required">*</span></label>
                     <input type="text" class="form-control-inline" id="state" name="state" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="country" class="form-label">Country</label>
+                    <label for="country" class="form-label">Country <span class="required">*</span></label>
                     <input type="text" class="form-control-inline" id="country" name="country" required>
                 </div>
 
@@ -57,7 +57,7 @@
 
 
         <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">Email <span class="required">*</span></label>
             <input type="email" class="form-control-inline" id="email" name="email" required>
         </div>
 
@@ -65,5 +65,11 @@
         <button class="btn btn-success">Register</button>
     </form>
 </div>
+<style>
+    .required {
+    color: red;
+}
+
+</style>
 
 @endsection

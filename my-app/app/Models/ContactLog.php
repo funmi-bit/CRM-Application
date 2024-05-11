@@ -9,7 +9,7 @@ class ContactLog extends Model
 {
     use HasFactory;
 
-    protected $table = 'contact_logs'; // Specify the table name if it differs from the default naming convention
+    protected $table = 'contact_logs'; 
 
     protected $fillable = [
         'customer_first_name',
